@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IIT दिल्ली एलुमनी टीम द्वारा निर्मित VIDHYA एजुकेशन में आपका स्वागत है। जो  एक नि: शुल्क Online 
+    Educational मंच है |">
+    <meta name="author" content="amankriet">
+    <meta name="keywords" content="Login, Credentials, Vidhya, Web, App, School, UDISE, School, Education">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="imgs/vidhya.jpeg" type="image/icon type">
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="/__/firebase/8.2.4/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+    <title>Login Credentials</title>
+</head>
+<body>
+    <div id="header">IIT दिल्ली एलुमनी टीम द्वारा निर्मित VIDHYA एजुकेशन में आपका स्वागत है। जो  एक नि: शुल्क Online Educational मंच है |</div>
+    <div class="container">
+        <div class="form_element">
+            <label for="state"><b>State</b></label>
+            <input type="text" placeholder="State" id="state" name="state" required>
+        </div>
+
+        <div class="form_element">
+            <label for="district"><b>District</b></label>
+            <input type="text" placeholder="District" id="district" name="district" required>
+        </div>
+
+        <div class="form_element">
+            <label for="school_code"><b>UDISE School Code</b></label>
+            <input type="number" placeholder="UDISE School Code" id="school_code" name="school_code" required>
+        </div>
+
+        <button id="get_cred" type="submit">Get Credentials</button>
+    </div>
+    
+    <div class="container">
+        <pre id="no_data">
+            अपने गलत UDISE CODE दर्ज किया है। कृपया सही UDISE CODE  दर्ज करे ।
+
+            अधिक जानकारी के लिए संपर्क करे 
+
+            - प्रांजल डोंगरे 
+            <a href="tel:+91 9518362305">+91 9518362305</a>
+
+            -अदिति बनिक 
+            <a href="tel:+91 70856 08210">+91 70856 08210</a>
+            </pre>
+        <p id="data">Your username is - <span id="username">username</span> and Your Password is - <span id="password">password</span></p>
+    </div>
+
+    
+
+    <div id="footer">
+        <img class="logo" src="imgs/vidhya.jpeg" width="72px" height="72px">
+        <p class="footer_text"> &#169; Vidhya </p>
+    </div>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBikjI2357aNZJOMI2jGoVDvKo2-sUI9yQ",
+            authDomain: "login-credential-54e35.firebaseapp.com",
+            databaseURL: "https://login-credential-54e35-default-rtdb.firebaseio.com",
+            projectId: "login-credential-54e35",
+            storageBucket: "login-credential-54e35.appspot.com",
+            messagingSenderId: "855926307173",
+            appId: "1:855926307173:web:915fa876316ae7e194898c",
+            measurementId: "G-3Z7F8YYYR2"
+        };
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
